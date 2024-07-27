@@ -1,0 +1,98 @@
+<html>
+    <header>
+        <title>
+            My form
+        </title>
+        <style>
+            body{
+                background-color: aqua;
+                margin: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1{
+                text-align: center;
+                color: #333;
+            }
+            form{
+                background-color: #fff;
+                border-radius: 10px;
+                /* box-shadow: 100px 100px 100px rgba(red, green, blue, alpha); */
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            label{
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="number"],
+            select,textarea{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            input[type="radio"],
+            input[type="chechbox"]{
+                margin-right: 10px;
+            }
+            hr{
+                border: none;
+                height: 1px;
+                background-color: red;
+                margin: 20px 0;
+            }
+            input[type="submit"]{
+                background-color: #4caf50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover{
+                background-color: aquamarine;
+            }
+            
+        </style>
+    </header>
+    <body>
+        <form action="/submit_form" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value=""><br><hr>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" value=""><br><hr>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" value=""><br><hr>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male"><br>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female"><br>
+            <label for="female">Female</label><br><br><hr>
+            <label for="hobbies">hobbies:</label><br>
+            <input type="checkbox" id="reading" name="hobbies" value="reading"><br>
+            <label for="reading">Reading</label><br>
+            <input type="checkbox" id="swimming" name="hobbies" value="sw"><br>
+            <label for="swimming">Swimming</label><br>
+            <input type="checkbox" id="Football" name="hobbies" value="football"><br>
+            <label for="Football">Football</label><br><hr>
+            <label for="country">Country</label><br>
+            <select id="country" name="country">
+                <option value="USA">USA</option>
+                <option value="INDIA">INDIA</option>
+                <option value="CANADA">CANADA</option>
+                <option value="AUSTRALIA">AUSTRALIA</option>
+            </select><br><br><hr>
+            <label for="Comments">Comments</label><br>
+            <textarea id="Comments" name="Comments" rows="4" cols="50"></textarea><br><br><hr>
+            <input type="submit" value="Submit">
+
+        </form>
+    </body>
+</html>
