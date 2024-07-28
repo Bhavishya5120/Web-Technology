@@ -1,0 +1,30 @@
+<html>
+    <header>
+        <title>
+            EventHandler
+        </title>
+    </header>
+    
+    <body>
+        <button id="button">Clickme</button>
+        <input type="text" id="textInput" placeholder="Type Something...">
+        <div id="output"></div>
+    </body>
+    <script>
+        // This is event handler for button click 
+        function onButtonClick(){
+            alert("Button clicked");
+        }
+        // This is event handler for input field change
+        function onInputChange(event){
+            var outputDiv=document.getElementById("output");
+            outputDiv.textContent="You Typed: "+event.target.value;
+        }
+        document.addEventListener("DOMContentLoaded",function(){
+            var button=document.getElementById("button");
+            var textInput=document.getElementById("textInput");
+            button.addEventListener("click",onButtonClick);
+            textInput.addEventListener("input",onInputChange);
+        });
+    </script>
+</html>
